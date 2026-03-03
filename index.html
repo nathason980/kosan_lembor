@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felita Kost - Hunian Nyaman</title>
+  
+  <!-- Mengambil Font dari Google Fonts agar terlihat modern -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- RESET & BASIC STYLE --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* --- HEADER --- */
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* --- CONTAINER --- */
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    /* --- CARD STYLE --- */
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden; /* Agar gambar tidak keluar dari sudut */
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px); /* Efek naik sedikit saat di-hover */
+    }
+
+    /* --- GALLERY (Galeri Foto) --- */
+    .gallery {
+      display: flex;
+      overflow-x: auto; /* Bisa digeser ke samping */
+      scroll-snap-type: x mandatory; /* Efek magnet saat digeser */
+      -webkit-overflow-scrolling: touch;
+      height: 250px;
+    }
+
+    .gallery img {
+      flex: 0 0 80%; /* Gambar memenuhi lebar container */
+      width: 80%;
+      height: 80%;
+      object-fit: cover; /* Agar gambar tidak gepeng */
+      scroll-snap-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* --- INFO SECTION --- */
+    .info {
+      padding: 25px;
+    }
+
+    .info h3 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      background: #e1f5fe;
+      color: #0277bd;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .facilities {
+      margin: 15px 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .facilities span {
+      display: inline-block;
+      background: #f0f0f0;
+      padding: 4px 10px;
+      border-radius: 5px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      font-size: 0.85rem;
+    }
+
+    /* --- BUTTON --- */
+    .btn-wa {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn-wa:hover {
+      background-color: #128C7E;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    /* --- RESPONSIVE (HP) --- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .gallery { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Felita Kost</h1>
+    <p>Hunian Nyaman, Aman, dan Terjangkau</p>
+  </header>
+
+  <div class="container">
+
+    <!-- KOS 1 -->
+    <div class="card">
+      <div class="gallery">
+        <!-- GANTI src dengan nama file gambar Anda -->
+        <img src="C:\Users\ACER\Downloads\New folder (2)\WhatsApp Image 2026-02-23 at 17.01.00.jpeg" alt="Kamar 1">
+      </div>
+
+      <div class="info">
+        <h3>Kamar 1 <span class="price">Rp850.000</span></h3>
+        <p class="facilities">
+          <span>Listrik</span>
+          <span>KM Dalam</span>
+          <span>Parkir Luas</span>
+          <span>Air Lancar</span>
+        </p>
+        <p style="font-size: 0.9rem; color: #555;">
+          Kamar tipe 36 dengan desain minimalis. Lokasi strategis dekat puskesmas dan pasar.
+        </p>
+        <!-- Ganti nomor HP di bawah ini (format: 628xxx) -->
+        <a href="https://wa.me/6281339817823?text=Halo%20saya%20tertarik%20dengan%20Kos%20Melati" class="btn-wa" target="_blank">
+          Hubungi via WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- KOS 2 -->
+    <div class="card">
+      <div class="gallery">
+        <img src="https://placehold.co/600x400/png?text=Foto+Kamar+2" alt="Kamar 2">
+        <img src="https://placehold.co/600x400/png?text=Foto+Kamar+2+2" alt="Kamar 2">
+      </div>
+
+      <div class="info">
+        <h3>Kamar 2 <span class="price">Rp850.000</span></h3>
+        <p class="facilities">
+          <span>Listrik</span>
+          <span>KM Dalam</span>
+          <span>Parkiran Luas</span>
+          <span>Air Lancar</span>
+        </p>
+        <p style="font-size: 0.9rem; color: #555;">
+          Kamar tipe 45 dengan kamar mandi dalam yang luas dan air panas.
+        </p>
+        <!-- Ganti nomor HP di bawah ini -->
+        <a href="https://wa.me/6281339817823?text=Halo%20saya%20tertarik%20dengan%20Kos%20Anggrek" class="btn-wa" target="_blank">
+          Hubungi via WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2024 Felita Kost. All rights reserved.
+  </footer>
+
+</body>
+</html>
